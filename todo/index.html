@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой список задач</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Мои задачи</h1>
+
+    <form id="task-form" action="api.php" method="POST">
+      <label for="task-input">Новая задача</label>
+      <div class="form-row">
+        <input id="task-input" type="text" name="task" placeholder="Например, повторить CSS" required>
+        <button id="add-task" type="submit">Добавить</button>
+      </div>
+    </form>
+
+    <p id="status" role="status" aria-live="polite"></p>
+    <ul id="task-list"></ul>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
